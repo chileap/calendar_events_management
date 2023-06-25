@@ -1,24 +1,21 @@
-# README
+# Calendar Event Manager
+This is a simple calendar event manager built with Ruby on Rails. It allows users to create, edit, and delete events. It also allows users to view events in a calendar view.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements and Dependencies
+- Ruby 3.1.0
+- Rails 7.0.5
+- Hotwire/Stimulus
+- Tailwind CSS
+- PostgreSQL
+- RSpec
 
-Things you may want to cover:
+## Installation
+- Clone the repository
+- Run `bundle install`
+- Run `rails db:create`
+- Run `rails db:migrate`
+- Run `rails s`
+- Open `localhost:3000` in your browser
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Testing
+- Run `rspec`
