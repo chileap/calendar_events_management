@@ -14,7 +14,7 @@ This is a simple calendar event manager built with Ruby on Rails. It allows user
 - Run `bundle install`
 - Run `rails db:create`
 - Run `rails db:migrate`
-- Run `rails s`
+- Run `./bin/dev` # This will start the server and webpack-dev-server
 - Open `localhost:3000` in your browser
 
 ## Testing
