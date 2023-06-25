@@ -8,6 +8,7 @@ This is a simple calendar event manager built with Ruby on Rails. It allows user
 - Tailwind CSS
 - PostgreSQL
 - RSpec
+- FullCalendar
 
 ## Installation
 - Clone the repository
