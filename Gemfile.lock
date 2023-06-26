@@ -146,7 +146,7 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
-    cssbundling-rails (1.1.2)
+    cssbundling-rails (1.2.0)
       railties (>= 6.0.0)
     database_cleaner-active_record (2.1.0)
       activerecord (>= 5.a)
@@ -280,6 +280,8 @@ GEM
       net-protocol
     nio4r (2.5.9)
     nokogiri (1.15.2-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.15.2-x86_64-linux)
       racc (~> 1.4)
     noticed (1.6.3)
       http (>= 4.0.0)
@@ -497,6 +499,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   acts_as_tenant (~> 0.6)
@@ -507,7 +510,7 @@ DEPENDENCIES
   bullet
   capybara (>= 3.26)
   country_select (~> 8.0)
-  cssbundling-rails (~> 1.1.0)
+  cssbundling-rails (~> 1.2.0)
   database_cleaner-active_record
   debug (>= 1.0.0)
   devise (~> 4.8, >= 4.8.1)
