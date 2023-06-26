@@ -23,7 +23,7 @@ class UserDashboard < Administrate::BaseDashboard
     role: Field::String,
     sign_in_count: Field::Number,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES

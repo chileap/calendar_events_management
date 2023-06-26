@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  layout 'static'
+  layout "static"
 
   def index
   end
