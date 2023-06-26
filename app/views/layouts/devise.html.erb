@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      <% if content_for?(:title) %>
+        <%= yield :title %> |
+      <% end %>
+      Calendar Event Management
+    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+  </head>
+
+  <body class="flex justify-between h-full font-sans antialiased font-normal leading-normal bg-white">
+    <%= render partial: "shared/static_navbar" %>
+
+    <main class="pt-14 w-full">
+      <%= render partial: "shared/flash" %>
+      <%= yield %>
+    </main>
+  </body>
+</html>

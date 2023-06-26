@@ -1,5 +1,7 @@
 # Calendar Event Manager
 This is a simple calendar event manager built with Ruby on Rails. It allows users to create, edit, and delete events. It also allows users to view events in a calendar view.
+This application uses Hotwire/Stimulus for the front-end and PostgreSQL for the database.
+We setup UUIDs for the database to avoid exposing the primary key IDs to the user.
 
 ## Requirements and Dependencies
 - Ruby 3.1.0
@@ -9,6 +11,7 @@ This is a simple calendar event manager built with Ruby on Rails. It allows user
 - PostgreSQL
 - RSpec
 - FullCalendar
+- Devise
 
 ## Installation
 - Clone the repository

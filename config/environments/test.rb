@@ -8,7 +8,7 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # Turn false under Spring and add config.action_view.cache_template_loading = true.
+  # Turn false under Spring and add config.action_view.cache_template_loading = true
   config.cache_classes = true
 
   # Eager loading loads your whole application. When running a single test locally,
@@ -23,7 +23,7 @@ Rails.application.configure do
   }
 
   # Show full error reports and disable caching.
-  config.consider_all_requests_local       = true
+  config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
   config.cache_store = :null_store
 
@@ -42,6 +42,7 @@ Rails.application.configure do
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = {host: "localhost", port: 3000}
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
@@ -53,8 +54,25 @@ Rails.application.configure do
   config.active_support.disallowed_deprecation_warnings = []
 
   # Raises error for missing translations.
-  # config.i18n.raise_on_missing_translations = true
+  config.i18n.raise_on_missing_translations = true
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+
+  # Highlight code that triggered database queries in logs.
+  config.active_record.verbose_query_logs = true
+
+  # Raises error for missing translations.
+  # config.action_view.raise_on_missing_translations = true
+
+  # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
+  # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
+  config.require_master_key = true
+
+  # Reduce key stretching for performance in tests
+  config.stretches = 1
+
+  # Encrypts fixtures with Rails encryption
+  config.active_record.encryption.encrypt_fixtures = true
+  config.assets.css_compressor = nil
 end

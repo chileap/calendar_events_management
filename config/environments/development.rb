@@ -1,6 +1,13 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.bullet_logger = true
+    Bullet.console = true
+    Bullet.rails_logger = true
+  end
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -23,7 +30,7 @@ Rails.application.configure do
     config.action_controller.perform_caching = true
     config.action_controller.enable_fragment_cache_logging = true
 
-    config.cache_store = :memory_store
+    config.cache_store = :redis_cache_store, {url: ENV.fetch("REDIS_URL", "redis://localhost:6379/1")}
     config.public_file_server.headers = {
       "Cache-Control" => "public, max-age=#{2.days.to_i}"
     }
@@ -59,12 +66,25 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
-  # Raises error for missing translations.
-  # config.i18n.raise_on_missing_translations = true
+  # Raises error for missing translations
+  # config.action_view.raise_on_missing_translations = true
 
-  # Annotate rendered view with file names.
-  # config.action_view.annotate_rendered_view_with_filenames = true
+  # Adds HTML comments to the rendered output indicating where
+  # each template begins and ends
+  config.action_view.annotate_rendered_view_with_filenames = true
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # Set the default URL for ActionMailer in development.
+  config.action_mailer.default_url_options = {host: "lvh.me", port: ENV.fetch("PORT", 3000).to_i}
+  config.action_mailer.delivery_method = :letter_opener_web
+
+  # Allow accessing localhost on any domain. Important for testing multi-tenant apps
+  config.hosts = nil
+
+  # You may need to set to include the correct URLs from Turbo, etc
+  # config.action_controller.default_url_options = {host: "lvh.me", port: ENV.fetch("PORT", 3000).to_i}
+
+  config.i18n.raise_on_missing_translations = true
 end
