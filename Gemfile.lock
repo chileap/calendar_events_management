@@ -281,6 +281,8 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.2-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.15.2-x86_64-linux)
+      racc (~> 1.4)
     noticed (1.6.3)
       http (>= 4.0.0)
       rails (>= 5.2.0)
@@ -468,7 +470,7 @@ GEM
     uniform_notifier (1.16.0)
     user_preferences (1.0.2)
       activerecord (>= 4.0)
-    view_component (2.82.0)
+    view_component (3.2.0)
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
@@ -497,6 +499,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   acts_as_tenant (~> 0.6)
@@ -556,7 +559,7 @@ DEPENDENCIES
   turbo-rails (~> 1.4)
   tzinfo-data
   user_preferences (~> 1.0, >= 1.0.2)
-  view_component (~> 2.80)
+  view_component (~> 3.2)
   web-console (>= 4.1.0)
   webdrivers
   webmock
