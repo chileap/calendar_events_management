@@ -1,7 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "home/index.html.erb", type: :view do
-
   describe "GET /" do
     let(:user) { create(:user) }
 
