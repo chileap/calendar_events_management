@@ -309,8 +309,8 @@ GEM
     prefixed_ids (1.6.0)
       hashids (>= 1.0.0, < 2.0.0)
       rails (>= 6.0.0)
-    pretender (0.4.0)
-      actionpack (>= 5.2)
+    pretender (0.5.0)
+      actionpack (>= 6.1)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -337,8 +337,9 @@ GEM
       activesupport (= 7.0.5.1)
       bundler (>= 1.15.0)
       railties (= 7.0.5.1)
-    rails-dom-testing (2.0.3)
-      activesupport (>= 4.2.0)
+    rails-dom-testing (2.1.1)
+      activesupport (>= 5.0.0)
+      minitest
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
@@ -538,7 +539,7 @@ DEPENDENCIES
   pg_search (~> 2.3)
   prawn!
   prefixed_ids (~> 1.5)
-  pretender (~> 0.4.0)
+  pretender (~> 0.5.0)
   pry
   public_suffix
   puma (~> 6.2)
