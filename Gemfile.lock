@@ -110,6 +110,7 @@ GEM
       administrate (>= 0.2.2)
       rails (>= 7.0)
     ast (2.4.2)
+    base64 (0.1.1)
     bcrypt (3.1.18)
     better_html (2.0.1)
       actionview (>= 6.0)
@@ -184,7 +185,8 @@ GEM
       railties (>= 5.0.0)
     faker (3.2.0)
       i18n (>= 1.8.11, < 2)
-    faraday (2.7.7)
+    faraday (2.7.11)
+      base64
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
